@@ -6,12 +6,13 @@ export type Component<T = any> =
   | (() => Promise<typeof import("*.vue")>)
   | (() => Promise<T>);
 
-export type AppRouteMeta = RouteMeta &
-  Partial<{
-    title: string;
-    hiddenMenu: boolean;
-    hiddenChildrenInMenu: boolean;
-  }>;
+type _RouteMeta = Partial<{
+  title: string;
+  hiddenMenu: boolean;
+  hiddenChildrenInMenu: boolean;
+}>;
+
+export type AppRouteMeta = RouteMeta & _RouteMeta;
 
 // @ts-ignore
 export interface AppRouteRecordRaw extends Omit<RouteRecordRaw, "meta"> {
@@ -36,3 +37,7 @@ export interface Menu {
 }
 
 export type AppRouteModule = AppRouteRecordRaw;
+
+declare module "vue-router" {
+  interface RouteMeta extends _RouteMeta {}
+}
