@@ -65,7 +65,7 @@ type User = {
 };
 const user = ref<User>();
 
-onBeforeRouteUpdate(async (to, from) => {
+onBeforeRouteUpdate(async (to) => {
   const id = to.query.id;
   console.log("to.id:", id);
   if (!id) return;
@@ -75,7 +75,7 @@ onBeforeRouteUpdate(async (to, from) => {
   user.value = users.find((_) => _.id === id);
 });
 
-onBeforeRouteLeave((to, from) => {
+onBeforeRouteLeave(() => {
   return window.confirm("确定要离开？");
 });
 

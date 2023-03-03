@@ -71,5 +71,21 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       __APP_BUILD_TIME__: JSON.stringify(__APP_BUILD_TIME__),
       __APP_INFO__: JSON.stringify(__APP_INFO__),
     },
+    build: {
+      rollupOptions: {
+        // 自定义 chunk 分割策略
+        // https://rollupjs.org/guide/en/#outputmanualchunks
+        output: {
+          manualChunks: {
+            // 数组中的文件，会全部打包进一个名称为: 'lazy-loading.[chunkHash].js' 文件中
+            "lazy-loading": [
+              "./src/views/lazy-loading/a.vue",
+              "./src/views/lazy-loading/b.vue",
+              "./src/views/lazy-loading/c.vue",
+            ],
+          },
+        },
+      },
+    },
   };
 });

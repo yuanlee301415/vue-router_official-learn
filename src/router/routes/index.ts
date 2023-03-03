@@ -5,6 +5,7 @@ import ABOUT_ROUTE from "@/router/routes/modules/about";
 import TEST_ROUTE from "@/router/routes/modules/test";
 import NAMED_VIEWS_ROUTE from "@/router/routes/modules/named-views";
 import COMPOSITION_API_ROUTE from "@/router/routes/modules/composition-api";
+import LAZY_LOADING_ROUTE from "@/router/routes/modules/lazy-loading";
 // import NESTED_ROUTE from "@/router/routes/modules/nested";
 
 export const ROOT_ROUTE: AppRouteRecordRaw = {
@@ -62,6 +63,7 @@ export const basicRoutes = [
   TEST_ROUTE,
   NAMED_VIEWS_ROUTE,
   COMPOSITION_API_ROUTE,
+  LAZY_LOADING_ROUTE,
   // NESTED_ROUTE,
   PAGE_NOT_FOUND_ROUTE,
 ];
