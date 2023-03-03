@@ -1,6 +1,6 @@
 {
   "name": "vue-router_official-learn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue-router 官网学习",
   "scripts": {
     "dev": "vite",
