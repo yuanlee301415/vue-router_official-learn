@@ -31,6 +31,7 @@ const VITE_APP_TITLE = import.meta.env.VITE_APP_TITLE;
     font-size: 16px;
     line-height: normal;
     margin-left: 0.5rem;
+    word-break: break-word;
   }
 }
 nav {

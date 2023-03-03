@@ -1,10 +1,9 @@
-# Vue3-Ts-Template
+# vue-router_official-learn
 
-```bash
-npm init vue@latest
-```
+## [Vue-router 官网](https://router.vuejs.org/zh/)学习
 
-## Vue3 + TS 模板
+
+## Forked from: [Vue3-TS-Template](https://github.com/yuanlee301415/Vue3-TS-Template)
 
 This template should help get you started developing with Vue 3 in Vite.
 
