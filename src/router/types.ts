@@ -25,17 +25,6 @@ export interface AppRouteRecordRaw extends Omit<RouteRecordRaw, "meta"> {
   fullPath?: string;
 }
 
-export interface Menu {
-  name: string;
-  path: string;
-  children?: Menu[];
-  mata?: AppRouteMeta;
-  hiddenMenu?: boolean;
-  _parentName?: string;
-  _fullPath: string;
-  _depth: number;
-}
-
 export type AppRouteModule = AppRouteRecordRaw;
 
 declare module "vue-router" {
