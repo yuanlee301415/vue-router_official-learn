@@ -19,6 +19,15 @@ const ROUTER_LINK_ROUTE: AppRouteRecordRaw = {
         title: "props",
       },
     },
+
+    {
+      path: "v-slot",
+      name: "VSlotPage",
+      component: () => import("@/views/router-link/v-slot.vue"),
+      meta: {
+        title: "v-slot",
+      },
+    },
   ],
 };
 
