@@ -9,6 +9,7 @@ import LAZY_LOADING_ROUTE from "@/router/routes/modules/lazy-loading";
 import DYNAMIC_ROUTING_ROUTE from "@/router/routes/modules/dynamic-routing";
 import ROUTER_LINK_ROUTE from "@/router/routes/modules/router-link";
 import START_LOCATION_ROUTE from "@/router/routes/modules/start_location";
+import ROUTER__PROPS__ROUTE from "@/router/routes/modules/router-props";
 // import NESTED_ROUTE from "@/router/routes/modules/nested";
 
 export const ROOT_ROUTE: AppRouteRecordRaw = {
@@ -70,6 +71,7 @@ export const basicRoutes = [
   DYNAMIC_ROUTING_ROUTE,
   ROUTER_LINK_ROUTE,
   START_LOCATION_ROUTE,
+  ROUTER__PROPS__ROUTE,
   // NESTED_ROUTE,
   PAGE_NOT_FOUND_ROUTE,
 ];

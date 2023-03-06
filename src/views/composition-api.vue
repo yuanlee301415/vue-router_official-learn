@@ -13,7 +13,17 @@
   user:
   <pre>{{ user }}</pre>
 
-  <h2>useLink</h2>
+  <h2>useRoute()</h2>
+  <h6>
+    route
+    对象是一个响应式对象，所以它的任何属性都可以被监听，但你应该避免监听整个
+    route 对象。在大多数情况下，你应该直接监听你期望改变的参数。
+  </h6>
+
+  <h2>userRouter()</h2>
+  <h6>返回 router 实例。相当于在模板中使用 $router。必须在 setup() 中调用</h6>
+
+  <h2>useLink()</h2>
   <h6>
     <pre>
 useLink 组合函数公开了 router-link 组件在导航时其内部所产生的行为与信息。这些行为和信息与通过 router-link 作用域插槽 (v-slot) 所接收的属性完全相同。
@@ -40,22 +50,6 @@ import {
 } from "vue-router";
 
 /**
- * 在 setup 中访问路由和当前路由
- */
-const router = useRouter();
-console.log("router:", router);
-
-const route = useRoute();
-console.log("route:", route);
-
-watch(
-  () => route.query.id,
-  (id) => {
-    console.log("query.id:", id);
-  }
-);
-
-/**
  * 导航守卫
  */
 type User = {
@@ -80,8 +74,26 @@ onBeforeRouteLeave(() => {
 });
 
 /**
+ * useRoute()
+ */
+const route = useRoute();
+console.log("useRoute():", route);
+watch(
+  () => route.query.id,
+  (id) => {
+    console.log("query.id:", id);
+  }
+);
+
+/**
+ * useRouter()
+ */
+const router = useRouter();
+console.log("useRouter():", router);
+
+/**
  * useLink
  */
 const link = useLink({ to: "/xx" });
-console.log("link:", link);
+console.log("useLink():", link);
 </script>
